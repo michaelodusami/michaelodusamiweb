@@ -18,7 +18,7 @@ Over the years, I've honed my skills by working on personal projects, collaborat
 		linkedin: "https://www.linkedin.com/in/odusami03/",
 		devpost:
 			"https://devpost.com/modusami?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav",
-		email: "modusami03@gmail.com",
+		email: "mailto:modusami03@gmail.com",
 	},
 };
 

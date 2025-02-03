@@ -15,7 +15,7 @@ export function NavProvider({ children }: { children: ReactNode }) {
 	const handleSetActiveNav = (str: string) => {
 		if (str === "Resume") {
 			if (typeof window !== "undefined") {
-				window.open("/25.pdf", "_blank"); // Adjust the path to your resume PDF file
+				window.open("/resume.pdf", "_blank"); // Adjust the path to your resume PDF file
 			}
 			return;
 		}
