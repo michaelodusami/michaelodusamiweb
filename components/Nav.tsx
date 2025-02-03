@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useNav } from "@/provider/useNav";
 
-import { Briefcase, User, FileText, Monitor, PhoneCall, Search } from "lucide-react";
+import { Briefcase, User, FileText } from "lucide-react";
 
 const navItems = [
 	{ icon: User, label: "About Me" },

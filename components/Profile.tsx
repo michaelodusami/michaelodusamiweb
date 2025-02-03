@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Github, Linkedin, Mail, Twitter, Signpost } from "lucide-react";
+import { Github, Linkedin, Mail, Signpost } from "lucide-react";
 
 const profileData = {
 	name: "Michael Odusami",
