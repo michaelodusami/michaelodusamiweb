@@ -17,7 +17,7 @@ const navItems = [
 ];
 
 export function Nav() {
-	const { activeNav, setActiveNav } = useNav();
+	const { activeNav, handleSetActiveNav } = useNav();
 
 	return (
 		<nav
@@ -34,7 +34,7 @@ export function Nav() {
 							"w-full h-16 rounded-none group-hover:bg-muted transition-colors",
 							activeNav === label && "bg-muted"
 						)}
-						onClick={() => setActiveNav(label)}
+						onClick={() => handleSetActiveNav(label)}
 					>
 						<Icon className="h-5 w-5" />
 						<span className="sr-only">{label}</span>
