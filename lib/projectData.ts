@@ -189,7 +189,32 @@ const playlistManagerProject: ProjectData = {
 	highlights: `Developed a structured Python application to automate playlist management on YouTube Music, leveraging the YTMusicAPI.`,
 };
 
+const codefest: ProjectData = {
+	id: "marriott-codefest-2023",
+	title: "Marriott CodeFest VT – 1st Place Multi-App System",
+	description:
+		"A live, scalable multi-application system integrating web, mobile, and backend solutions, highlighted by a microservices-based recommendation engine. Developed over a 48-hour coding sprint, the project drew significant attention from Marriott's executive team.",
+	techStack: ["Next.js", "React Native", "FastAPI", "AWS"],
+	features: [
+		"Scalable microservices architecture",
+		"Cross-platform React Native mobile app",
+		"Next.js web application",
+		"Real-time APIs (50+ endpoints)",
+		"Recommendation engine",
+	],
+	liveDemoUrl: "https://youtu.be/l3zENh-a7C0",
+	githubUrl: "https://github.com/michaelodusami/codefest-refurnished-mobile-peregrine",
+	status: "Completed",
+	startDate: "2023-10-18",
+	thumbnailUrl: "projcodefest.png",
+	endDate: "2023-10-20",
+	category: "Mobile",
+	highlights:
+		"Achieved 1st place at Marriott CodeFest VT; invited to present to Marriott executives.",
+};
+
 export const projectData: ProjectData[] = [
+	codefest,
 	independentQueens,
 	mapAbilityProject,
 	yumexProject,
