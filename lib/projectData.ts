@@ -132,7 +132,6 @@ const javaExpenseTracker: ProjectData = {
 		"Delete expenses as needed",
 		"Enum-based categories and payment methods for streamlined categorization",
 	],
-	liveDemoUrl: "", // No live demo link available
 	githubUrl: "https://github.com/michaelodusami/javaEng-expense-tracker-cml",
 	status: "Completed",
 	startDate: "2023-08-01", // Placeholder date, adjust as needed
@@ -155,7 +154,6 @@ const jwtAuthProject: ProjectData = {
 		"Refresh token support to maintain long-term user sessions",
 		"Easily configurable and extendable authentication system",
 	],
-	liveDemoUrl: "", // No live demo link available
 	githubUrl: "https://github.com/michaelodusami/javaEng-JWT-userauthentication",
 	status: "Completed",
 	startDate: "2024-01-15", // Placeholder date, adjust as needed
@@ -179,7 +177,6 @@ const playlistManagerProject: ProjectData = {
 		"OAuth authentication for secure access to YouTube Music",
 		"Layered architecture with interface, service, controller, and backend modules",
 	],
-	liveDemoUrl: "", // No live demo available
 	githubUrl: "https://github.com/michaelodusami/pyEng-ytmusic-automation",
 	status: "Completed",
 	startDate: "2024-04-10", // Placeholder date, adjust as needed
@@ -206,7 +203,7 @@ const codefest: ProjectData = {
 	githubUrl: "https://github.com/michaelodusami/codefest-refurnished-mobile-peregrine",
 	status: "Completed",
 	startDate: "2023-10-18",
-	thumbnailUrl: "projcodefest.png",
+	thumbnailUrl: "/projcodefest.png",
 	endDate: "2023-10-20",
 	category: "Mobile",
 	highlights:
@@ -226,7 +223,7 @@ const travelDataSwift: ProjectData = {
 		"Modern UI – Designed with SwiftUI for a clean and intuitive interface."
 	],
 	githubUrl: "https://github.com/michaelodusami/swift_TravelGuide", // GitHub URL
-	thumbnailUrl: "swifttravelguide.png",
+	thumbnailUrl: "/swifttravelguide.png",
 	status: "Completed", // Status
 	startDate: "2025-02-13", // Start date (adjust as necessary)
 	category: "Mobile", // Category of project

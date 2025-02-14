@@ -10,11 +10,54 @@ interface ProjectsListProps {
 }
 
 export function ProjectsList({ projects }: ProjectsListProps) {
+	const [selectedTechStack, setSelectedTechStack] = useState<string[]>([]);
+
+	// Get unique tech stacks
+	const allTechStacks = Array.from(
+		new Set(projects.flatMap((project) => project.techStack))
+	);
+
+	// Filter projects based on selected tech stack
+	const filteredProjects = selectedTechStack.length
+		? projects.filter((project) =>
+				selectedTechStack.every((tech) => project.techStack.includes(tech))
+		  )
+		: projects;
+
+	const toggleTechStack = (tech: string) => {
+		setSelectedTechStack((prev) =>
+			prev.includes(tech) ? prev.filter((t) => t !== tech) : [...prev, tech]
+		);
+	};
+
 	return (
-		<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-			{projects.map((project) => (
-				<SingleProject key={project.id} project={project} />
-			))}
+		<div>
+			{/* Filter Options */}
+			<div className="mb-6">
+				<h3 className="text-lg font-semibold mb-2">Filter by Tech Stack:</h3>
+				<div className="flex flex-wrap gap-2">
+					{allTechStacks.map((tech) => (
+						<button
+							key={tech}
+							onClick={() => toggleTechStack(tech)}
+							className={`px-3 py-1 rounded-full border ${
+								selectedTechStack.includes(tech)
+									? "bg-primary text-white"
+									: "bg-muted text-foreground"
+							}`}
+						>
+							{tech}
+						</button>
+					))}
+				</div>
+			</div>
+
+			{/* Project List */}
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+				{filteredProjects.map((project) => (
+					<SingleProject key={project.id} project={project} />
+				))}
+			</div>
 		</div>
 	);
 }
