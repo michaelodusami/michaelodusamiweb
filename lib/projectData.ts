@@ -213,8 +213,29 @@ const codefest: ProjectData = {
 		"Achieved 1st place at Marriott CodeFest VT; invited to present to Marriott executives.",
 };
 
+const travelDataSwift: ProjectData = {
+	id: "swift_travel_guide_001", // Unique identifier
+	title: "Travel Guide",
+	description: "Travel Guide is an iOS app built with SwiftUI that helps users explore popular destinations. The app provides details about places and attractions, with interactive maps and a smooth navigation experience.",
+	techStack: ["Swift", "SwiftUI"],
+	features: [
+		"Browse Places – View a list of travel destinations.",
+		"Explore Attractions – Discover attractions in each place.",
+		"View Locations on a Map – See places and attractions pinned on a map.",
+		"Navigate Between Screens – Seamless navigation with NavigationStack.",
+		"Modern UI – Designed with SwiftUI for a clean and intuitive interface."
+	],
+	githubUrl: "https://github.com/michaelodusami/swift_TravelGuide", // GitHub URL
+	thumbnailUrl: "swifttravelguide.png",
+	status: "Completed", // Status
+	startDate: "2025-02-13", // Start date (adjust as necessary)
+	category: "Mobile", // Category of project
+};
+
+
 export const projectData: ProjectData[] = [
 	codefest,
+	travelDataSwift,
 	independentQueens,
 	mapAbilityProject,
 	yumexProject,
@@ -222,4 +243,5 @@ export const projectData: ProjectData[] = [
 	javaExpenseTracker,
 	jwtAuthProject,
 	playlistManagerProject,
+	
 ];
