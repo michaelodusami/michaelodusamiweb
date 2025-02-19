@@ -8,9 +8,9 @@ import { useNav } from "@/provider/useNav";
 import { Briefcase, User, FileText } from "lucide-react";
 
 const navItems = [
-	{ icon: User, label: "About Me" },
-	{ icon: Briefcase, label: "Projects" },
-	{ icon: FileText, label: "Resume" },
+	{ icon: User, label: "Profile" },
+	// { icon: Briefcase, label: "Projects" },
+	// { icon: FileText, label: "Resume" },
 	// { icon: Monitor, label: "Skills" },
 	// { icon: Search, label: "Explore" },
 	// { icon: PhoneCall, label: "Contact" },

@@ -17,8 +17,8 @@ interface ProfileItem {
 }
 
 export const profileData: ProfileData = {
-	name: "Michael Odusami",
-	bio: "Software Engineer | Mobile & Web Developer | Computer Science Student",
+	name: "Michael-Andre Odusami",
+	bio: "Software Engineer | Mobile & Web Developer | Computer Science @ Virginia Tech",
 	profilePicture: "/michaelodusami.png", // Replace with your image path
 	socialLinks: {
 		github: "https://github.com/michaelodusami",

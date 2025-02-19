@@ -18,219 +18,236 @@ export interface ProjectData {
 const independentQueens: ProjectData = {
 	id: "independent-queens",
 	title: "Independent Queens",
-	description: `Independent Queens is a women-centric empowerment platform designed to enhance productivity, well-being, and community building.`,
+	description:
+	  "A women-centric platform that boosts productivity, fosters well-being, and encourages community-building. Integrates AI for scheduling, sentiment analysis, and personalized recommendations to empower daily routines.",
 	techStack: ["React", "TypeScript", "Tailwind CSS", "ShadCN"],
 	techStackIncludedButNotUsed: [
-		"GraphQL",
-		"FastAPI",
-		"Python",
-		"MongoDB",
-		"AWS (Cognito, Lambda, S3)",
-		"LangChain",
-		"Docker",
+	  "GraphQL",
+	  "FastAPI",
+	  "Python",
+	  "MongoDB",
+	  "AWS (Cognito, Lambda, S3)",
+	  "LangChain",
+	  "Docker",
 	],
 	features: [
-		"Personalized scheduler with Canvas API and menstrual cycle integration",
-		"Digital journal with sentiment analysis for emotional well-being",
-		"Community explore page for networking and connections",
-		"Points-based skill exchange system with a gift card redemption feature",
-		"Generative AI and Machine Learning-powered recommendations for activities and well-being",
+	  "Personalized scheduler with Canvas API and menstrual cycle integration",
+	  "Digital journal with sentiment analysis for emotional well-being",
+	  "Community explore page for networking and connections",
+	  "Points-based skill exchange system with a gift card redemption feature",
+	  "Generative AI and Machine Learning-powered recommendations for activities and well-being",
 	],
 	liveDemoUrl: "https://iqns.dhruvv.dev",
 	githubUrl: "https://devpost.com/software/independent-queens",
 	status: "Completed",
-	startDate: "2025-02-01", // Placeholder start date, adjust as needed
+	startDate: "2025-02-01",
 	category: "Web",
-	highlights: `Developed for HackViolet 2025; Built using a full-stack approach with a focus on women empowerment through productivity, well-being, and skill exchange.`,
-	thumbnailUrl: "/indiqueens.png", // Add your thumbnail image path here}
-};
-
-const mapAbilityProject: ProjectData = {
+	highlights:
+	  "Developed for HackViolet 2025; Built using a full-stack approach with a focus on women empowerment through productivity, well-being, and skill exchange.",
+	thumbnailUrl: "/indiqueens.png",
+  };
+  
+  const mapAbilityProject: ProjectData = {
 	id: "mapability",
-	title: "MapAbility",
-	description: `MapAbility is an accessibility-focused application that allows users to search and review buildings based on accessibility and friendliness metrics. `,
+	title: "Mapability",
+	description:
+	  "An accessibility-focused platform that lets users search, review, and plan journeys around buildings based on inclusivity metrics. AI-driven features help tailor travel plans and highlight accessibility options for a seamless user experience.",
 	techStack: ["TypeScript", "ShadCN", "React", "Next.js", "Tailwind CSS"],
 	techStackIncludedButNotUsed: ["FastAPI", "MongoDB", "Docker", "AWS"],
 	features: [
-		"Building search and accessibility reviews",
-		"Day planner and journey planning with accessibility-first recommendations",
-		"Explore functionality backed by AI-generated summaries and aggregated reviews",
-		"Personalized accessibility plans using generative AI",
-		"Accessibility features like dyslexia-friendly text, text resizing, contrast mode, text-to-speech, and speech-to-text",
+	  "Building search and accessibility reviews",
+	  "Day planner and journey planning with accessibility-first recommendations",
+	  "Explore functionality backed by AI-generated summaries and aggregated reviews",
+	  "Personalized accessibility plans using generative AI",
+	  "Accessibility features like dyslexia-friendly text, text resizing, contrast mode, text-to-speech, and speech-to-text",
 	],
 	liveDemoUrl: "https://mapability.vercel.app/home",
 	githubUrl: "https://devpost.com/software/mapability-16m47i",
 	status: "Completed",
-	startDate: "2024-10-01", // Placeholder date, adjust as needed
-	endDate: "2025-01-15", // Placeholder date, adjust as needed
+	startDate: "2024-10-01",
+	endDate: "2025-01-15",
 	thumbnailUrl: "/projmapability.png",
 	category: "Web",
-	highlights: `Winner of CoStar Group's Best Real Estate Hack at VTHacks 12. Built to promote accessibility and inclusivity in infrastructure through crowd-sourced reviews and AI-powered recommendations.`,
-};
-
-const yumexProject: ProjectData = {
+	highlights:
+	  "Winner of CoStar Group's Best Real Estate Hack at VTHacks 12. Built to promote accessibility and inclusivity in infrastructure through crowd-sourced reviews and AI-powered recommendations.",
+  };
+  
+  const yumexProject: ProjectData = {
 	id: "yumex-food-forum",
-	title: "Yumex - Food Lovers Forum",
-	description: `Yumex is a dynamic platform designed for food enthusiasts to share culinary experiences, discover new dishes, and engage with a like-minded community. `,
+	title: "Yumex",
+	description:
+	  "A social hub for food lovers to share culinary discoveries, discuss recipes, and explore new dishes. Offers real-time community interaction with image-supported posts, comments, and upvotes.",
 	techStack: ["React", "ShadCN", "Next.js", "TypeScript", "Supabase"],
 	techStackIncludedButNotUsed: [],
 	features: [
-		"Post creation with optional image uploads",
-		"Home feed with post sorting by time and upvotes",
-		"Dedicated post pages with detailed information",
-		"User authentication and authorization for post and comment management",
-		"Comments and upvotes functionality",
-		"Post categorization and navigation carousel",
-		"Post preview during creation",
-		"Search functionality by post title (after database integration)",
+	  "Post creation with optional image uploads",
+	  "Home feed with post sorting by time and upvotes",
+	  "Dedicated post pages with detailed information",
+	  "User authentication and authorization for post and comment management",
+	  "Comments and upvotes functionality",
+	  "Post categorization and navigation carousel",
+	  "Post preview during creation",
+	  "Search functionality by post title (after database integration)",
 	],
 	liveDemoUrl: "https://youtu.be/qcUbhgHgbd8",
 	githubUrl: "https://github.com/michaelodusami/fstackEng-yumex-food-forum",
 	status: "Completed",
-	startDate: "2023-05-01", // Placeholder date, adjust as needed
-	endDate: "2023-05-16", // Placeholder date, adjust as needed
+	startDate: "2023-05-01",
+	endDate: "2023-05-16",
 	thumbnailUrl: "/projyumex.png",
 	category: "Web",
-	highlights: `Developed as the final project for a Web Development course. Includes features for post management, user authentication, and real-time comment updates.`,
-};
-const bytesProject: ProjectData = {
+	highlights:
+	  "Developed as the final project for a Web Development course. Includes features for post management, user authentication, and real-time comment updates.",
+  };
+  
+  const bytesProject: ProjectData = {
 	id: "bytes-news-app",
-	title: "Bytes - Short-Form News App",
-	description: `Bytes is a dynamic, short-form news application designed to engage the modern generation. It combines news, reels, and college-specific content to provide a personalized news platform for students. The app acknowledges evolving media consumption habits and offers a user-friendly experience with swipe navigation, local news highlights, and text-to-speech functionality.`,
+	title: "Bytes Mobile",
+	description:
+	  "A short-form news application targeting students, merging local news, reels, and college-specific content. Emphasizes a user-friendly interface with swipe navigation and text-to-speech features for modern, on-the-go reading.",
 	techStack: ["React Native", "Expo Go", "NewsAPI", "PropelAuth"],
 	techStackIncludedButNotUsed: ["MongoDB", "Cloudinary"],
 	features: [
-		"Compatible with both Android and iOS devices",
-		"User-friendly swipe navigation",
-		"Local news articles on the landing page",
-		"Text-to-speech functionality for article reading",
-		"Category-based article filtering",
-		"User profile customization (name, email, school, dark/light mode)",
-		"Admin tools to publish urgent news",
+	  "Compatible with both Android and iOS devices",
+	  "User-friendly swipe navigation",
+	  "Local news articles on the landing page",
+	  "Text-to-speech functionality for article reading",
+	  "Category-based article filtering",
+	  "User profile customization (name, email, school, dark/light mode)",
+	  "Admin tools to publish urgent news",
 	],
 	liveDemoUrl: "https://github.com/michaelodusami/hackathon-bytes",
 	githubUrl: "https://github.com/michaelodusami/hackathon-bytes",
 	status: "Completed",
-	startDate: "2024-03-10", // Placeholder date, adjust as needed
-	endDate: "2024-03-17", // Placeholder date, adjust as needed
-	thumbnailUrl: "/projbytes.png", // Placeholder thumbnail, update as needed
+	startDate: "2024-03-10",
+	endDate: "2024-03-17",
+	thumbnailUrl: "/projbytes.png",
 	category: "Mobile",
-	highlights: `Developed during HooHacks 2024. A mobile-first, interactive news app offering modern features like text-to-speech, swipe navigation, and real-time news filtering.`,
-};
-
-const javaExpenseTracker: ProjectData = {
+	highlights:
+	  "Developed during HooHacks 2024. A mobile-first, interactive news app offering modern features like text-to-speech, swipe navigation, and real-time news filtering.",
+  };
+  
+  const javaExpenseTracker: ProjectData = {
 	id: "expense-tracker",
-	title: "Expense Tracker",
-	description: `The Expense Tracker is a Java-based application designed to help users manage their financial records. It allows users to create, view, update, and delete expenses while organizing them by categories and payment methods. This application is built with a robust backend that leverages Java's powerful frameworks and MySQL for persistent data storage.`,
+	title: "CML Expense Tracker",
+	description:
+	  "A Java-based solution for organizing personal finances with CRUD operations, category tracking, and real-time updates. Utilizes Spring Boot, MySQL, and enum-based structures for clarity and consistency.",
 	techStack: ["Java", "Spring Boot", "Spring Data JPA", "MySQL", "Hibernate"],
 	techStackIncludedButNotUsed: [],
 	features: [
-		"Create new expenses with details like title, amount, category, and payment method",
-		"Find expenses by ID, category, or payment method",
-		"View all expenses in a structured format",
-		"Update expense details in real-time",
-		"Delete expenses as needed",
-		"Enum-based categories and payment methods for streamlined categorization",
+	  "Create new expenses with details like title, amount, category, and payment method",
+	  "Find expenses by ID, category, or payment method",
+	  "View all expenses in a structured format",
+	  "Update expense details in real-time",
+	  "Delete expenses as needed",
+	  "Enum-based categories and payment methods for streamlined categorization",
 	],
 	githubUrl: "https://github.com/michaelodusami/javaEng-expense-tracker-cml",
 	status: "Completed",
-	startDate: "2023-08-01", // Placeholder date, adjust as needed
-	endDate: "2023-08-15", // Placeholder date, adjust as needed
+	startDate: "2023-08-01",
+	endDate: "2023-08-15",
 	thumbnailUrl: "/projjavaexpensetracker.png",
 	category: "Backend",
-	highlights: `Developed using Spring Boot and MySQL, this application demonstrates essential CRUD functionality for financial management with enum-based categorization.`,
-};
-
-const jwtAuthProject: ProjectData = {
+	highlights:
+	  "Developed using Spring Boot and MySQL, this application demonstrates essential CRUD functionality for financial management with enum-based categorization.",
+  };
+  
+  const jwtAuthProject: ProjectData = {
 	id: "jwt-authentication",
-	title: "JWT User Authentication in Spring Boot",
-	description: `This is a boilerplate template for implementing JWT (JSON Web Token) authentication in a Spring Boot application. It provides a secure and scalable solution to authenticate and authorize users, ensuring that only authenticated users can access protected resources.`,
+	title: "JWT User Authentication",
+	description:
+	  "A Spring Boot starter template for secure, token-based authentication and role-based authorization. Ensures only verified users can access protected resources, with refresh tokens for extended sessions.",
 	techStack: ["Spring Boot", "PostgreSQL", "Docker", "JWT"],
 	techStackIncludedButNotUsed: [],
 	features: [
-		"User authentication using JSON Web Tokens (JWT)",
-		"Role-based access control for fine-grained permission management",
-		"Secure endpoints for login, registration, and access to protected resources",
-		"Refresh token support to maintain long-term user sessions",
-		"Easily configurable and extendable authentication system",
+	  "User authentication using JSON Web Tokens (JWT)",
+	  "Role-based access control for fine-grained permission management",
+	  "Secure endpoints for login, registration, and access to protected resources",
+	  "Refresh token support to maintain long-term user sessions",
+	  "Easily configurable and extendable authentication system",
 	],
 	githubUrl: "https://github.com/michaelodusami/javaEng-JWT-userauthentication",
 	status: "Completed",
-	startDate: "2024-01-15", // Placeholder date, adjust as needed
-	endDate: "2024-01-30", // Placeholder date, adjust as needed
-	thumbnailUrl: "/projjwt.png", // Placeholder thumbnail, update as needed
+	startDate: "2024-01-15",
+	endDate: "2024-01-30",
+	thumbnailUrl: "/projjwt.png",
 	category: "Backend",
-	highlights: `Developed a secure, role-based authentication system using JWTs with Spring Boot. Designed to be easily reusable and configurable for different applications.`,
-};
-
-const playlistManagerProject: ProjectData = {
+	highlights:
+	  "Developed a secure, role-based authentication system using JWTs with Spring Boot. Designed to be easily reusable and configurable for different applications.",
+  };
+  
+  const playlistManagerProject: ProjectData = {
 	id: "playlist-manager",
-	title: "Playlist Manager Interface",
-	description: `The Playlist Manager Interface is a Python program for managing playlists on YouTube Music. It allows users to perform various operations such as creating, deleting, and updating playlists, as well as adding or removing songs. This program uses the ytmusicapi library to interact with YouTube Music and supports OAuth-based authentication.`,
+	title: "Youtube Music Playlist Manager",
+	description:
+	  "A Python-based tool for creating, updating, and removing YouTube Music playlists via the YTMusicAPI. Employs OAuth for secure access and a layered structure for robust maintainability.",
 	techStack: ["Python", "YTMusicAPI"],
 	techStackIncludedButNotUsed: [],
 	features: [
-		"Create new playlists and manage them",
-		"Add and remove songs from playlists",
-		"Delete playlists",
-		"Interact with YouTube Music using the YTMusicAPI",
-		"OAuth authentication for secure access to YouTube Music",
-		"Layered architecture with interface, service, controller, and backend modules",
+	  "Create new playlists and manage them",
+	  "Add and remove songs from playlists",
+	  "Delete playlists",
+	  "Interact with YouTube Music using the YTMusicAPI",
+	  "OAuth authentication for secure access to YouTube Music",
+	  "Layered architecture with interface, service, controller, and backend modules",
 	],
 	githubUrl: "https://github.com/michaelodusami/pyEng-ytmusic-automation",
 	status: "Completed",
-	startDate: "2024-04-10", // Placeholder date, adjust as needed
-	endDate: "2024-04-20", // Placeholder date, adjust as needed
-	thumbnailUrl: "/projpyauto.png", // Placeholder thumbnail, update as needed
+	startDate: "2024-04-10",
+	endDate: "2024-04-20",
+	thumbnailUrl: "/projpyauto.png",
 	category: "Automation",
-	highlights: `Developed a structured Python application to automate playlist management on YouTube Music, leveraging the YTMusicAPI.`,
-};
-
-const codefest: ProjectData = {
+	highlights:
+	  "Developed a structured Python application to automate playlist management on YouTube Music, leveraging the YTMusicAPI.",
+  };
+  
+  const codefest: ProjectData = {
 	id: "marriott-codefest-2023",
-	title: "Marriott CodeFest VT – 1st Place Multi-App System",
+	title: "Charriot",
 	description:
-		"A live, scalable multi-application system integrating web, mobile, and backend solutions, highlighted by a microservices-based recommendation engine. Developed over a 48-hour coding sprint, the project drew significant attention from Marriott's executive team.",
+	  "A multi-application system featuring web, mobile, and backend solutions built in a 48-hour sprint. Showcases a microservices-based recommendation engine, real-time APIs, and cross-platform React Native support.",
 	techStack: ["Next.js", "React Native", "FastAPI", "AWS"],
 	features: [
-		"Scalable microservices architecture",
-		"Cross-platform React Native mobile app",
-		"Next.js web application",
-		"Real-time APIs (50+ endpoints)",
-		"Recommendation engine",
+	  "Scalable microservices architecture",
+	  "Cross-platform React Native mobile app",
+	  "Next.js web application",
+	  "Real-time APIs (50+ endpoints)",
+	  "Recommendation engine",
 	],
 	liveDemoUrl: "https://youtu.be/l3zENh-a7C0",
-	githubUrl: "https://github.com/michaelodusami/codefest-refurnished-mobile-peregrine",
+	githubUrl:
+	  "https://github.com/michaelodusami/codefest-refurnished-mobile-peregrine",
 	status: "Completed",
 	startDate: "2023-10-18",
-	thumbnailUrl: "/projcodefest.png",
 	endDate: "2023-10-20",
+	thumbnailUrl: "/projcodefest.png",
 	category: "Mobile",
 	highlights:
-		"Achieved 1st place at Marriott CodeFest VT; invited to present to Marriott executives.",
-};
-
-const travelDataSwift: ProjectData = {
-	id: "swift_travel_guide_001", // Unique identifier
-	title: "Travel Guide",
-	description: "Travel Guide is an iOS app built with SwiftUI that helps users explore popular destinations. The app provides details about places and attractions, with interactive maps and a smooth navigation experience.",
+	  "Achieved 1st place at Marriott CodeFest VT; invited to present to Marriott executives.",
+  };
+  
+  const travelDataSwift: ProjectData = {
+	id: "swift_travel_guide_001",
+	title: "Travel Guide IOS",
+	description:
+	  "An iOS app for browsing travel destinations, attractions, and interactive maps. Uses SwiftUI for clean, modern navigation and a streamlined user experience.",
 	techStack: ["Swift", "SwiftUI"],
 	features: [
-		"Browse Places – View a list of travel destinations.",
-		"Explore Attractions – Discover attractions in each place.",
-		"View Locations on a Map – See places and attractions pinned on a map.",
-		"Navigate Between Screens – Seamless navigation with NavigationStack.",
-		"Modern UI – Designed with SwiftUI for a clean and intuitive interface."
+	  "Browse Places – View a list of travel destinations",
+	  "Explore Attractions – Discover attractions in each place",
+	  "View Locations on a Map – See pins for destinations and attractions",
+	  "Navigate Between Screens – Seamless navigation with NavigationStack",
+	  "Modern UI – Designed with SwiftUI for a clean and intuitive interface",
 	],
-	githubUrl: "https://github.com/michaelodusami/swift_TravelGuide", // GitHub URL
+	githubUrl: "https://github.com/michaelodusami/swift_TravelGuide",
 	thumbnailUrl: "/swifttravelguide.png",
-	status: "Completed", // Status
-	startDate: "2025-02-13", // Start date (adjust as necessary)
-	category: "Mobile", // Category of project
-};
-
-
-export const projectData: ProjectData[] = [
+	status: "Completed",
+	startDate: "2025-02-13",
+	category: "Mobile",
+  };
+  
+  // Export updated project array
+  export const projectData: ProjectData[] = [
 	codefest,
 	travelDataSwift,
 	independentQueens,
@@ -240,5 +257,6 @@ export const projectData: ProjectData[] = [
 	javaExpenseTracker,
 	jwtAuthProject,
 	playlistManagerProject,
-	
-];
+  ];
+  
+
