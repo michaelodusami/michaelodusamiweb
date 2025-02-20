@@ -1,5 +1,5 @@
-import { projectData, ProjectData } from "@/lib/projectData"
-import { Github, GithubIcon, VideoIcon } from "lucide-react"
+import {  ProjectData } from "@/lib/projectData"
+import { GithubIcon, VideoIcon } from "lucide-react"
 
 function ProjectCard({project}: {project: ProjectData})
 {

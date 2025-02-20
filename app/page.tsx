@@ -1,7 +1,5 @@
 "use client";
 import ProfilePage from "@/components/Profile";
-import { ProjectsList } from "@/components/Projects";
-import { projectData } from "@/lib/projectData";
 import { useNav } from "@/provider/useNav";
 
 // Components for each section
@@ -31,7 +29,7 @@ export default function Home() {
 
 	return (
 		<div className="min-h-screen md:p-5 mx-auto">
-			<div className="w-">
+			<div className="w[">
 				{ActiveComponent ? <ActiveComponent /> : <div>Select an option from the menu</div>}
 			</div>
 		</div>
