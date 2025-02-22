@@ -245,6 +245,22 @@ const independentQueens: ProjectData = {
 	startDate: "2025-02-13",
 	category: "Mobile",
   };
+
+  const chatgptswiftuionlyclone: ProjectData = {
+	id: "chatgptswiftuionlyclone",
+	title: "GPT SwiftUI Single Page Clone",
+	description: "Re-made a look-alike ChatGPT mobile app home screen with SwiftUI. This project is purely UI-based with no functionality.",
+	techStack: ["Swift", "SwiftUI"],
+	techStackIncludedButNotUsed: [], // No additional libraries were included
+	features: ["Static UI replication", "Custom SwiftUI components", "Dark mode support"], // Features related to the UI
+	status: "Completed",
+	startDate: "2025-02-22",
+	endDate: "2025-02-22", // Since it's a simple UI clone, it was likely completed in a day
+	category: "Mobile",
+	thumbnailUrl: "URL_TO_YOUR_IMAGE", // Replace with the actual image URL if hosted somewhere
+	githubUrl: "https://github.com/michaelodusami/chat-gpt-swift-onlyui-clone", // Replace with actual repo URL if available
+  };
+  
   
   // Export updated project array
   export const projectData: ProjectData[] = [
@@ -257,6 +273,7 @@ const independentQueens: ProjectData = {
 	javaExpenseTracker,
 	jwtAuthProject,
 	playlistManagerProject,
+	chatgptswiftuionlyclone
   ];
   
 
