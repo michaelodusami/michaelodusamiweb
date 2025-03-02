@@ -8,6 +8,7 @@ interface ProfileData {
         linkedin: string;
         devpost: string;
         email: string;
+		youtube: string;
     };
 }
 
@@ -26,6 +27,7 @@ export const profileData: ProfileData = {
 		devpost:
 			"https://devpost.com/modusami?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav",
 		email: "mailto:modusami03@gmail.com",
+		youtube: "https://www.youtube.com/@michaelodus"
 	},
 };
 

@@ -1,5 +1,6 @@
 "use client";
-import ProfilePage from "@/components/Profile";
+import ProfilePage from "@/components/ProfilePage";
+import YoutubePage from "@/components/YoutubeLibrary/YoutubePage";
 import { useNav } from "@/provider/useNav";
 
 // Components for each section
@@ -17,8 +18,8 @@ function AboutMe() {
 // }
 
 const componentsMap: { [key: string]: React.FC } = {
-	"About Me": AboutMe,
-	// Projects: Project,
+	"Profile": AboutMe,
+	"Youtube": YoutubePage
 };
 
 export default function Home() {
@@ -28,10 +29,8 @@ export default function Home() {
 	const ActiveComponent = componentsMap[activeNav];
 
 	return (
-		<div className="min-h-screen md:p-5 mx-auto">
-			<div className="w[">
-				{ActiveComponent ? <ActiveComponent /> : <div>Select an option from the menu</div>}
-			</div>
+		<div className="w-[70%] mx-auto">
+			{ActiveComponent ? <ActiveComponent /> : <div>Select an option from the menu</div>}
 		</div>
 	);
 }

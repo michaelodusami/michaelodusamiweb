@@ -3,7 +3,7 @@ import { useState } from "react";
 import { profileData } from "@/lib/profileData";
 import { projectData, ProjectData } from "@/lib/projectData";
 import ProjectCard from "@/components/ProjectCard";
-import { Linkedin, Github, Mail, Signpost } from "lucide-react";
+import { Linkedin, Github, Mail, Signpost, YoutubeIcon } from "lucide-react";
 
 export default function ProfilePage() {
   const [filteredProjects, setFilteredProjects] = useState<ProjectData[]>(projectData);
@@ -32,11 +32,14 @@ export default function ProfilePage() {
           <a href={profileData.socialLinks.github} target="_blank" rel="noopener noreferrer">
             <Github className="w-6 h-6 hover:text-primary transition-colors" />
           </a>
-          <a href={profileData.socialLinks.email}>
+          <a href={profileData.socialLinks.email} target="_blank" rel="noopener noreferrer">
             <Mail className="w-6 h-6 hover:text-primary transition-colors" />
           </a>
-          <a href={profileData.socialLinks.devpost}>
+          <a href={profileData.socialLinks.devpost} target="_blank" rel="noopener noreferrer">
             <Signpost className="w-6 h-6 hover:text-primary transition-colors" />
+          </a>
+          <a href={profileData.socialLinks.youtube} target="_blank" rel="noopener noreferrer">
+            <YoutubeIcon className="w-6 h-6 text-red-500 hover:text-primary transition-colors" />
           </a>
         </div>
       </section>
@@ -66,6 +69,22 @@ export default function ProfilePage() {
           }`}
         >
           Web Projects
+        </button>
+        <button
+          onClick={() => filterProjects("Backend")}
+          className={`px-4 py-2 border rounded ${
+            activeFilter === "Backend" ? "bg-primary text-white" : "bg-gray-200"
+          }`}
+        >
+          Backend Projects
+        </button>
+        <button
+          onClick={() => filterProjects("Automation")}
+          className={`px-4 py-2 border rounded ${
+            activeFilter === "Automation" ? "bg-primary text-white" : "bg-gray-200"
+          }`}
+        >
+          Automation Projects
         </button>
       </div>
 

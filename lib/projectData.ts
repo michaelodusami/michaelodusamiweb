@@ -44,7 +44,7 @@ const independentQueens: ProjectData = {
 	category: "Web",
 	highlights:
 	  "Developed for HackViolet 2025; Built using a full-stack approach with a focus on women empowerment through productivity, well-being, and skill exchange.",
-	thumbnailUrl: "/indiqueens.png",
+	thumbnailUrl: "/projects/projindiqueens.png",
   };
   
   const mapAbilityProject: ProjectData = {
@@ -66,7 +66,7 @@ const independentQueens: ProjectData = {
 	status: "Completed",
 	startDate: "2024-10-01",
 	endDate: "2025-01-15",
-	thumbnailUrl: "/projmapability.png",
+	thumbnailUrl: "/projects/projmapability.png",
 	category: "Web",
 	highlights:
 	  "Winner of CoStar Group's Best Real Estate Hack at VTHacks 12. Built to promote accessibility and inclusivity in infrastructure through crowd-sourced reviews and AI-powered recommendations.",
@@ -94,7 +94,7 @@ const independentQueens: ProjectData = {
 	status: "Completed",
 	startDate: "2023-05-01",
 	endDate: "2023-05-16",
-	thumbnailUrl: "/projyumex.png",
+	thumbnailUrl: "/projects/projyumex.png",
 	category: "Web",
 	highlights:
 	  "Developed as the final project for a Web Development course. Includes features for post management, user authentication, and real-time comment updates.",
@@ -121,7 +121,7 @@ const independentQueens: ProjectData = {
 	status: "Completed",
 	startDate: "2024-03-10",
 	endDate: "2024-03-17",
-	thumbnailUrl: "/projbytes.png",
+	thumbnailUrl: "/projects/projbytes.png",
 	category: "Mobile",
 	highlights:
 	  "Developed during HooHacks 2024. A mobile-first, interactive news app offering modern features like text-to-speech, swipe navigation, and real-time news filtering.",
@@ -146,7 +146,7 @@ const independentQueens: ProjectData = {
 	status: "Completed",
 	startDate: "2023-08-01",
 	endDate: "2023-08-15",
-	thumbnailUrl: "/projjavaexpensetracker.png",
+	thumbnailUrl: "/projects/projjavaexpensetracker.png",
 	category: "Backend",
 	highlights:
 	  "Developed using Spring Boot and MySQL, this application demonstrates essential CRUD functionality for financial management with enum-based categorization.",
@@ -170,7 +170,7 @@ const independentQueens: ProjectData = {
 	status: "Completed",
 	startDate: "2024-01-15",
 	endDate: "2024-01-30",
-	thumbnailUrl: "/projjwt.png",
+	thumbnailUrl: "/projects/projjwt.png",
 	category: "Backend",
 	highlights:
 	  "Developed a secure, role-based authentication system using JWTs with Spring Boot. Designed to be easily reusable and configurable for different applications.",
@@ -195,7 +195,7 @@ const independentQueens: ProjectData = {
 	status: "Completed",
 	startDate: "2024-04-10",
 	endDate: "2024-04-20",
-	thumbnailUrl: "/projpyauto.png",
+	thumbnailUrl: "/projects/projpyauto.png",
 	category: "Automation",
 	highlights:
 	  "Developed a structured Python application to automate playlist management on YouTube Music, leveraging the YTMusicAPI.",
@@ -220,7 +220,7 @@ const independentQueens: ProjectData = {
 	status: "Completed",
 	startDate: "2023-10-18",
 	endDate: "2023-10-20",
-	thumbnailUrl: "/projcodefest.png",
+	thumbnailUrl: "/projects/projcodefest.png",
 	category: "Mobile",
 	highlights:
 	  "Achieved 1st place at Marriott CodeFest VT; invited to present to Marriott executives.",
@@ -240,7 +240,7 @@ const independentQueens: ProjectData = {
 	  "Modern UI – Designed with SwiftUI for a clean and intuitive interface",
 	],
 	githubUrl: "https://github.com/michaelodusami/swift_TravelGuide",
-	thumbnailUrl: "/swifttravelguide.png",
+	thumbnailUrl: "/projects/swifttravelguide.png",
 	status: "Completed",
 	startDate: "2025-02-13",
 	category: "Mobile",

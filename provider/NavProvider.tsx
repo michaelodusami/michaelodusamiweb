@@ -10,7 +10,7 @@ interface NavContectType {
 export const NavContext = createContext<NavContectType | undefined>(undefined);
 
 export function NavProvider({ children }: { children: ReactNode }) {
-	const [activeNav, setActiveNav] = useState<string>("About Me");
+	const [activeNav, setActiveNav] = useState<string>("Profile");
 
 	const handleSetActiveNav = (str: string) => {
 		if (str === "Resume") {

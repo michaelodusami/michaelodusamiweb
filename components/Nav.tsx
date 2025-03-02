@@ -4,12 +4,11 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useNav } from "@/provider/useNav";
-
-import { User} from "lucide-react";
+import { User, YoutubeIcon} from "lucide-react";
 
 const navItems = [
 	{ icon: User, label: "Profile" },
-	// { icon: Briefcase, label: "Projects" },
+	{ icon: YoutubeIcon, label: "Youtube" },
 	// { icon: FileText, label: "Resume" },
 	// { icon: Monitor, label: "Skills" },
 	// { icon: Search, label: "Explore" },
@@ -32,7 +31,8 @@ export function Nav() {
 						size="icon"
 						className={cn(
 							"w-full h-16 rounded-none group-hover:bg-muted transition-colors",
-							activeNav === label && "bg-muted"
+							activeNav === label && "bg-muted",
+							label === "Youtube" && "text-red-500"
 						)}
 						onClick={() => handleSetActiveNav(label)}
 					>

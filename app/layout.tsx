@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-// import { Nav } from "@/components/Nav";
+import { Nav } from "@/components/Nav";
 import { NavProvider } from "@/provider/NavProvider";
 
 // const geistSans = Geist({
@@ -36,10 +36,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${poppins.className}  antialiased`}>
+			<body className={`${poppins.className}  antialiased min-h-screen`}>
 				<NavProvider>
-					{/* <Nav /> */}
-					<div className=" pt-10 bg-gray-50">{children}</div>
+					<Nav />
+					<div className="min-h-screen">
+					{children}
+					</div>
 				</NavProvider>
 			</body>
 		</html>
