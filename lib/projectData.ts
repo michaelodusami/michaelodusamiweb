@@ -274,6 +274,7 @@ const independentQueens: ProjectData = {
 	category: "Mobile",
 	thumbnailUrl: "URL_TO_YOUR_IMAGE", // Replace with the actual image URL if hosted somewhere
 	githubUrl: "https://github.com/michaelodusami/ThreadMark", // Replace with actual repo URL if available
+	liveDemoUrl: "https://youtube.com/shorts/Ros1954n2Sc?feature=share"
   };
   
   // Export updated project array
