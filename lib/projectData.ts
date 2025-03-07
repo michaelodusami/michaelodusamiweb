@@ -261,6 +261,20 @@ const independentQueens: ProjectData = {
 	githubUrl: "https://github.com/michaelodusami/chat-gpt-swift-onlyui-clone", // Replace with actual repo URL if available
   };
   
+  const threadmarkboomarkswiftuiproject: ProjectData = {
+	id: "threadmarkboomarkswiftuiproject_id",
+	title: "Bookmarking",
+	description: "Made a SwiftUI application for creating bookmarks (notes) with attributes demonstrating knowledge using CoreData",
+	techStack: ["Swift", "SwiftUI", "CoreData"],
+	techStackIncludedButNotUsed: [], // No additional libraries were included
+	features: ["Bookmark Creating and Deletion"], // Features related to the UI
+	status: "Completed",
+	startDate: "2025-02-22",
+	endDate: "2025-02-22", // Since it's a simple UI clone, it was likely completed in a day
+	category: "Mobile",
+	thumbnailUrl: "URL_TO_YOUR_IMAGE", // Replace with the actual image URL if hosted somewhere
+	githubUrl: "https://github.com/michaelodusami/ThreadMark", // Replace with actual repo URL if available
+  };
   
   // Export updated project array
   export const projectData: ProjectData[] = [
@@ -273,7 +287,8 @@ const independentQueens: ProjectData = {
 	javaExpenseTracker,
 	jwtAuthProject,
 	playlistManagerProject,
-	chatgptswiftuionlyclone
+	chatgptswiftuionlyclone,
+	threadmarkboomarkswiftuiproject
   ];
   
 
