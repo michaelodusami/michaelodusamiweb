@@ -90,7 +90,7 @@ const independentQueens: ProjectData = {
 	  "Search functionality by post title (after database integration)",
 	],
 	liveDemoUrl: "https://youtu.be/qcUbhgHgbd8",
-	githubUrl: "https://github.com/michaelodusami/fstackEng-yumex-food-forum",
+	githubUrl: "https://github.com/michaelodusami/typescript-next-yumex_foodforum",
 	status: "Completed",
 	startDate: "2023-05-01",
 	endDate: "2023-05-16",
@@ -116,8 +116,8 @@ const independentQueens: ProjectData = {
 	  "User profile customization (name, email, school, dark/light mode)",
 	  "Admin tools to publish urgent news",
 	],
-	liveDemoUrl: "https://github.com/michaelodusami/hackathon-bytes",
-	githubUrl: "https://github.com/michaelodusami/hackathon-bytes",
+	liveDemoUrl: "https://github.com/michaelodusami/reactnative-bytes",
+	githubUrl: "https://github.com/michaelodusami/reactnative-bytes",
 	status: "Completed",
 	startDate: "2024-03-10",
 	endDate: "2024-03-17",
@@ -142,7 +142,7 @@ const independentQueens: ProjectData = {
 	  "Delete expenses as needed",
 	  "Enum-based categories and payment methods for streamlined categorization",
 	],
-	githubUrl: "https://github.com/michaelodusami/javaEng-expense-tracker-cml",
+	githubUrl: "https://github.com/michaelodusami/spring-expensetracker_cml",
 	status: "Completed",
 	startDate: "2023-08-01",
 	endDate: "2023-08-15",
@@ -166,7 +166,7 @@ const independentQueens: ProjectData = {
 	  "Refresh token support to maintain long-term user sessions",
 	  "Easily configurable and extendable authentication system",
 	],
-	githubUrl: "https://github.com/michaelodusami/javaEng-JWT-userauthentication",
+	githubUrl: "https://github.com/michaelodusami/spring-tdd-jwt_auth",
 	status: "Completed",
 	startDate: "2024-01-15",
 	endDate: "2024-01-30",
@@ -191,7 +191,7 @@ const independentQueens: ProjectData = {
 	  "OAuth authentication for secure access to YouTube Music",
 	  "Layered architecture with interface, service, controller, and backend modules",
 	],
-	githubUrl: "https://github.com/michaelodusami/pyEng-ytmusic-automation",
+	githubUrl: "https://github.com/michaelodusami/python-ytmusic-automation",
 	status: "Completed",
 	startDate: "2024-04-10",
 	endDate: "2024-04-20",
@@ -216,7 +216,7 @@ const independentQueens: ProjectData = {
 	],
 	liveDemoUrl: "https://youtu.be/l3zENh-a7C0",
 	githubUrl:
-	  "https://github.com/michaelodusami/codefest-refurnished-mobile-peregrine",
+	  "https://github.com/michaelodusami/reactnative-charriot",
 	status: "Completed",
 	startDate: "2023-10-18",
 	endDate: "2023-10-20",
@@ -239,7 +239,7 @@ const independentQueens: ProjectData = {
 	  "Navigate Between Screens – Seamless navigation with NavigationStack",
 	  "Modern UI – Designed with SwiftUI for a clean and intuitive interface",
 	],
-	githubUrl: "https://github.com/michaelodusami/swift_TravelGuide",
+	githubUrl: "https://github.com/michaelodusami/swiftui-travelguide",
 	thumbnailUrl: "/projects/swifttravelguide.png",
 	status: "Completed",
 	startDate: "2025-02-13",
@@ -258,7 +258,7 @@ const independentQueens: ProjectData = {
 	endDate: "2025-02-22", // Since it's a simple UI clone, it was likely completed in a day
 	category: "Mobile",
 	thumbnailUrl: "URL_TO_YOUR_IMAGE", // Replace with the actual image URL if hosted somewhere
-	githubUrl: "https://github.com/michaelodusami/chat-gpt-swift-onlyui-clone", // Replace with actual repo URL if available
+	githubUrl: "https://github.com/michaelodusami/swift-chatgpt_ui_clone", // Replace with actual repo URL if available
   };
   
   const threadmarkboomarkswiftuiproject: ProjectData = {
@@ -273,9 +273,32 @@ const independentQueens: ProjectData = {
 	endDate: "2025-02-22", // Since it's a simple UI clone, it was likely completed in a day
 	category: "Mobile",
 	thumbnailUrl: "URL_TO_YOUR_IMAGE", // Replace with the actual image URL if hosted somewhere
-	githubUrl: "https://github.com/michaelodusami/ThreadMark", // Replace with actual repo URL if available
+	githubUrl: "https://github.com/michaelodusami/swiftui-coredata-threadmark", // Replace with actual repo URL if available
 	liveDemoUrl: "https://youtube.com/shorts/Ros1954n2Sc?feature=share"
   };
+
+  export const swiftweatherappv1: ProjectData = {
+	id: "swift-weather-app-v1",
+	title: "Weather App V1",
+	description: "A SwiftUI-based weather application that fetches real-time weather data from OpenWeatherMap and integrates with MapKit for seamless location search. Users can search for any city, view live weather updates, and see the selected location on a map.",
+	techStack: ["Swift", "SwiftUI", "MapKit", "OpenWeatherMap API", "CoreLocation"],
+	techStackIncludedButNotUsed: ["CoreLocation"], // If you planned to use but didn't
+	features: [
+		"Location-based weather search",
+		"Live weather updates",
+		"MapKit integration with dynamic markers",
+		"Seamless navigation with SwiftUI's NavigationStack",
+		"Dynamic UI updates based on API responses"
+	],
+	liveDemoUrl: "https://www.youtube.com/shorts/vdmZ3Rh400U?si=IdCfOeTncndbmC9Y",
+	githubUrl: "https://github.com/michaelodusami/swiftui-mapkit-weatherv1app",
+	status: "Completed",
+	startDate: "2025-03-07",
+	thumbnailUrl: "DisneyLandWeatherImg.png", // Assuming this is an appropriate thumbnail
+	category: "Mobile",
+	highlights: "Successfully implemented a real-time weather tracking app with modern SwiftUI and MapKit features. Optimized for iOS 16+ with seamless navigation and user experience.",
+};
+
   
   // Export updated project array
   export const projectData: ProjectData[] = [
