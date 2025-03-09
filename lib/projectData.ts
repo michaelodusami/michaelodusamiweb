@@ -303,16 +303,18 @@ const independentQueens: ProjectData = {
   // Export updated project array
   export const projectData: ProjectData[] = [
 	codefest,
+	bytesProject,
+	swiftweatherappv1,
 	travelDataSwift,
 	independentQueens,
 	mapAbilityProject,
 	yumexProject,
-	bytesProject,
 	javaExpenseTracker,
 	jwtAuthProject,
 	playlistManagerProject,
 	chatgptswiftuionlyclone,
-	threadmarkboomarkswiftuiproject
+	threadmarkboomarkswiftuiproject,
+	
   ];
   
 
