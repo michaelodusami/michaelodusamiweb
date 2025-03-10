@@ -1,6 +1,5 @@
 "use client";
 import ProfilePage from "@/components/ProfilePage";
-import YoutubePage from "@/components/YoutubeLibrary/YoutubePage";
 import { useNav } from "@/provider/useNav";
 
 // Components for each section
