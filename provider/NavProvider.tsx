@@ -19,6 +19,12 @@ export function NavProvider({ children }: { children: ReactNode }) {
 			}
 			return;
 		}
+		if (str === "Youtube") {
+			if (typeof window !== "undefined") {
+				window.open("https://www.youtube.com/@michaelodus", "_blank");
+			}
+			return
+		}		
 		setActiveNav(str);
 	};
 

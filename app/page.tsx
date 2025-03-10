@@ -19,7 +19,6 @@ function AboutMe() {
 
 const componentsMap: { [key: string]: React.FC } = {
 	"Profile": AboutMe,
-	"Youtube": YoutubePage
 };
 
 export default function Home() {
