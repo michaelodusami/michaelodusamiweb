@@ -37,12 +37,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${poppins.className}  antialiased min-h-screen`}>
-				<NavProvider>
-					<Nav />
-					<div className="min-h-screen">
+				<div className="min-h-screen">
 					{children}
-					</div>
-				</NavProvider>
+				</div>
 			</body>
 		</html>
 	);
