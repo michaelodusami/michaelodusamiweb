@@ -1,32 +1,31 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { Nav } from "@/components/Nav";
-import { NavProvider } from "@/provider/NavProvider";
-
-// const geistSans = Geist({
-// 	variable: "--font-geist-sans",
-// 	subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-// 	variable: "--font-geist-mono",
-// 	subsets: ["latin"],
-// });
-
-// const inter = Inter({
-// 	subsets: ["latin"]
-// })
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const poppins = Poppins({
 	subsets: ["latin"],
-	weight: "400"
-})
-
+	weight: ["400", "500", "600", "700"],
+	variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
-	title: "ODUSAMI",
-	description: "Michae;-Andre Odusami's Portfolio Site",
+	title: "Michael Odusami | iOS Engineer",
+	description: "iOS Engineer and content creator passionate about continuous learning. Portfolio showcasing mobile development projects and technical content.",
+	keywords: ["iOS Engineer", "Swift", "SwiftUI", "Mobile Development", "Portfolio"],
+	authors: [{ name: "Michael Odusami" }],
+	creator: "Michael Odusami",
+	openGraph: {
+		title: "Michael Odusami | iOS Engineer",
+		description: "iOS Engineer and content creator passionate about continuous learning.",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Michael Odusami | iOS Engineer",
+		description: "iOS Engineer and content creator passionate about continuous learning.",
+	},
 };
 
 export default function RootLayout({
@@ -35,10 +34,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body className={`${poppins.className}  antialiased min-h-screen`}>
-				<div className="min-h-screen">
-					{children}
+		<html lang="en" className={poppins.variable}>
+			<body className="min-h-screen bg-background font-sans antialiased">
+				<div className="flex min-h-screen flex-col">
+					<Header />
+					<main className="flex-1">
+						{children}
+					</main>
+					<Footer />
 				</div>
 			</body>
 		</html>

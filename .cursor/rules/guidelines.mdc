@@ -1,0 +1,238 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+````mdc
+---
+description: Promotes independent and flexible components, hooks, and utilities in TypeScript React.
+globs:
+  - "**/*.ts"
+  - "**/*.tsx"
+alwaysApply: false # Set to true if you want these rules always applied, or false for Agent Requested/Manual
+---
+
+# Cursor Rule: Promote Independence & Flexibility in TypeScript React
+
+This rule set encourages highly decoupled, reusable, and testable code within TypeScript React projects by enforcing strict contracts, separation of concerns, and idiomatic React patterns.
+
+---
+
+## 1. Strict Component Prop Typing (Explicit Contracts)
+
+**Guideline:** All component props must be explicitly typed using TypeScript interfaces or types. Avoid `any` or implicit typing for props to ensure clear data contracts.
+
+**Rationale:** Explicit prop types define clear contracts for components, making them predictable, easier to understand, and independent of internal implementation details. This also enables better IDE support and refactoring.
+
+**Example:**
+```typescript
+// BAD: Implicit props - leads to ambiguity and lack of type safety
+const MyComponent = ({ data }) => { /* ... */ };
+
+// GOOD: Explicitly typed props - clear contract for consumers
+interface MyComponentProps {
+    id: string;
+    name: string;
+    isActive: boolean;
+    onClick: (id: string) => void;
+}
+const MyComponent: React.FC<MyComponentProps> = ({ id, name, isActive, onClick }) => {
+    // ... component logic
+    return <button onClick={() => onClick(id)}>{name}</button>;
+};
+````
+
+-----
+
+## 2\. Encapsulate Side Effects in Custom Hooks or Utilities
+
+**Guideline:** Logic involving data fetching, subscriptions, timers, or any other side effects must be abstracted into reusable custom hooks or pure utility functions. Components should primarily focus on rendering based on props and state.
+
+**Rationale:** Separating side effects from presentation logic makes components "dumb" (presentational) and allows complex logic to be tested, reused, and maintained independently. This reduces coupling between UI and data/business logic.
+
+**Example:**
+
+```typescript
+// BAD: Side effect directly in component - harder to reuse and test independently
+const UserProfile = ({ userId }: { userId: string }) => {
+    const [user, setUser] = React.useState(null);
+    React.useEffect(() => {
+        fetch(`/api/users/${userId}`)
+            .then(res => res.json())
+            .then(setUser)
+            .catch(error => console.error("Failed to fetch user:", error));
+    }, [userId]);
+    return <div>{user ? user.name : "Loading..."}</div>;
+};
+
+// GOOD: Encapsulated in a custom hook - reusable, testable, and cleaner component
+// File: hooks/useUser.ts
+import { useState, useEffect } from 'react';
+
+interface User {
+    id: string;
+    name: string;
+    email: string;
+}
+
+export const useUser = (userId: string) => {
+    const [user, setUser] = useState<User | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<Error | null>(null);
+
+    useEffect(() => {
+        if (!userId) {
+            setUser(null);
+            setLoading(false);
+            return;
+        }
+        setLoading(true);
+        setError(null);
+        fetch(`/api/users/${userId}`)
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                return res.json();
+            })
+            .then(data => {
+                setUser(data);
+                setLoading(false);
+            })
+            .catch(err => {
+                setError(err);
+                setLoading(false);
+            });
+    }, [userId]);
+
+    return { user, loading, error };
+};
+
+// File: components/UserProfile.tsx
+import React from 'react';
+import { useUser } from '../hooks/useUser'; // Assuming relative path
+
+const UserProfile = ({ userId }: { userId: string }) => {
+    const { user, loading, error } = useUser(userId);
+
+    if (loading) return <div>Loading user profile...</div>;
+    if (error) return <div>Error: {error.message}</div>;
+    if (!user) return <div>No user found.</div>;
+
+    return (
+        <div>
+            <h3>{user.name}</h3>
+            <p>Email: {user.email}</p>
+        </div>
+    );
+};
+```
+
+-----
+
+## 3\. Prefer Composition over Prop Drilling or Excessive Context
+
+**Guideline:** Utilize component composition (passing children, render props) for UI layout and data flow where appropriate. Avoid excessive prop drilling (passing props through many intermediate components) or over-relying on global context for localized state.
+
+**Rationale:** Composition leads to more flexible and less coupled components. Excessive prop drilling can indicate a need for more localized state management or a restructuring of the component hierarchy. Context should be used for truly global or widely shared state, not just to avoid passing a prop or two.
+
+**Example:**
+
+```typescript
+// BAD (Excessive Prop Drilling):
+// Root -> Parent -> Child -> Grandchild (passing `theme` prop down many levels)
+
+// GOOD (Composition with children):
+interface CardProps {
+    title: string;
+    children: React.ReactNode; // Accepts any React node as content
+    footer?: React.ReactNode;
+}
+const Card: React.FC<CardProps> = ({ title, children, footer }) => (
+    <div style={{ border: '1px solid gray', padding: '15px', margin: '10px' }}>
+        <h2>{title}</h2>
+        <div style={{ marginTop: '10px' }}>
+            {children} {/* Renders content passed by parent */}
+        </div>
+        {footer && <div style={{ marginTop: '10px', borderTop: '1px solid lightgray', paddingTop: '5px' }}>{footer}</div>}
+    </div>
+);
+
+// Usage:
+const MyPage = () => {
+    return (
+        <Card title="Welcome">
+            <p>This is the main content of the card.</p>
+            <button>Click me!</button>
+            {/* Footer is optional */}
+        </Card>
+    );
+};
+```
+
+-----
+
+## 4\. Pure Functions for Utilities
+
+**Guideline:** All general utility functions (not specific to React components or hooks) should be pure functions. This means they should always return the same output for the same input and have no side effects.
+
+**Rationale:** Pure functions are highly predictable, easily testable in isolation, and completely independent of external state or order of execution. This enhances reliability and maintainability.
+
+**Example:**
+
+```typescript
+// BAD: Not a pure function - depends on external `VAT_RATE` and has potential side effect (console.log)
+let VAT_RATE = 0.20;
+const calculateTotalPrice = (price: number, quantity: number) => {
+    const subtotal = price * quantity;
+    console.log("Calculating total price...");
+    return subtotal * (1 + VAT_RATE);
+};
+
+// GOOD: Pure function - no external dependencies or side effects
+export const calculateTotalPricePure = (price: number, quantity: number, taxRate: number) => {
+    return (price * quantity) * (1 + taxRate);
+};
+
+// Usage:
+const finalPrice = calculateTotalPricePure(100, 2, 0.20); // Always returns 240
+```
+
+-----
+
+## 5\. Avoid Direct DOM Manipulation in Components
+
+**Guideline:** Components should render UI based on props and state. Direct manipulation of the DOM using `document.querySelector`, `getElementById`, etc., should be avoided. If direct DOM interaction is absolutely necessary (e.g., integrating with a third-party library that requires a DOM element), use `useRef` and encapsulate the logic.
+
+**Rationale:** React manages the DOM efficiently. Bypassing React's reconciliation process with direct DOM manipulation leads to unmanageable state, potential performance issues, and tight coupling to the browser environment, making components less flexible and harder to test.
+
+**Example:**
+
+```typescript
+// BAD: Direct DOM manipulation - bypasses React
+const MyInputComponent = () => {
+    React.useEffect(() => {
+        // This is fragile and doesn't play well with React's lifecycle
+        const inputElement = document.getElementById('my-special-input') as HTMLInputElement;
+        if (inputElement) {
+            inputElement.focus();
+        }
+    }, []);
+
+    return <input id="my-special-input" type="text" />;
+};
+
+// GOOD: React-idiomatic DOM interaction with useRef
+const MyRefInputComponent = () => {
+    const inputRef = React.useRef<HTMLInputElement>(null);
+
+    React.useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.focus(); // Focus the input when component mounts
+        }
+    }, []);
+
+    return <input ref={inputRef} type="text" />;
+};
+```
+
+```
+```
