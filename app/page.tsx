@@ -1,42 +1,9 @@
 import React from 'react';
-import { 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  ExternalLink,
-  Youtube,
-  Mail
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import { getAllSocialLinks } from '@/lib/data/social';
 
 export default function HomePage() {
-  const socialLinks = [
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com/in/odusami03',
-      icon: Linkedin,
-    },
-    {
-      name: 'X/Twitter',
-      href: 'https://twitter.com/michaelodusami',
-      icon: Twitter,
-    },
-    {
-      name: 'GitHub',
-      href: 'https://github.com/michaelodusami',
-      icon: Github,
-    },
-    {
-      name: 'Medium',
-      href: 'https://medium.com/@michaelodusami',
-      icon: ExternalLink,
-    },
-    {
-      name: 'YouTube',
-      href: 'https://youtube.com/@michaelodusami',
-      icon: Youtube,
-    },
-  ];
+  const socialLinks = getAllSocialLinks();
 
   return (
     <div className="min-h-screen">
@@ -75,27 +42,24 @@ export default function HomePage() {
                     </a>
                   );
                 })}
-                <a
-                  href="mailto:modusami@gmail.com"
-                  className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                  aria-label="Email"
-                >
-                  <Mail size={24} />
-                </a>
               </div>
             </div>
 
             {/* Professional Photo */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                {/* Placeholder for professional photo */}
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
-                    <div className="text-6xl mb-4">📱</div>
-                    <p className="text-sm">Professional Photo</p>
-                    <p className="text-xs">(Placeholder)</p>
-                  </div>
+                <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl">
+                  <Image
+                    src="/michaelodusami.jpeg"
+                    alt="Michael Odusami - iOS Engineer"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
+                {/* Optional decorative ring */}
+                <div className="absolute inset-0 rounded-full border-4 border-primary/20 -z-10"></div>
               </div>
             </div>
           </div>

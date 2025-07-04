@@ -1,46 +1,12 @@
 import React from 'react';
-import { 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  ExternalLink,
-  Youtube
-} from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { socialLinks } from '@/lib/data/social';
 
 interface FooterProps {
   className?: string;
 }
 
 export const Footer: React.FC<FooterProps> = ({ className }) => {
-  const socialLinks = [
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com/in/odusami03',
-      icon: Linkedin,
-    },
-    {
-      name: 'X/Twitter',
-      href: 'https://twitter.com/michaelodusami',
-      icon: Twitter,
-    },
-    {
-      name: 'GitHub',
-      href: 'https://github.com/michaelodusami',
-      icon: Github,
-    },
-    {
-      name: 'Medium',
-      href: 'https://medium.com/@michaelodusami',
-      icon: ExternalLink,
-    },
-    {
-      name: 'YouTube',
-      href: 'https://youtube.com/@michaelodusami',
-      icon: Youtube,
-    },
-  ];
-
   return (
     <footer className={cn(
       "border-t bg-background",
