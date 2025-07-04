@@ -33,10 +33,10 @@ export default function ProjectsPage() {
           {mobileProjects.map((project) => (
             <article
               key={project.id}
-              className="bg-card shadow-xl rounded-2xl flex flex-col md:flex-row md:items-stretch overflow-hidden"
+              className="bg-card shadow-xl rounded-2xl flex flex-col overflow-hidden"
             >
-              {/* Left: Info */}
-              <div className="flex-1 p-8 flex flex-col justify-center md:max-w-[40%]">
+              {/* Info Top */}
+              <div className="p-8 flex flex-col justify-center">
                 <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
                 <p className="text-muted-foreground text-lg mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -55,12 +55,12 @@ export default function ProjectsPage() {
                   View Project <ExternalLink size={18} />
                 </a>
               </div>
-              {/* Right: Screens */}
-              <div className="flex-1 flex gap-4 justify-center items-center p-6 md:p-8 bg-muted md:max-w-[60%]">
+              {/* Images Bottom */}
+              <div className="flex gap-4 justify-center items-center p-6 overflow-x-auto">
                 {project.screens.map((screen, idx) => (
                   <div
                     key={idx}
-                    className="relative w-44 h-96 rounded-xl overflow-hidden shadow-lg bg-white flex-shrink-0"
+                    className="relative w-32 h-64 sm:w-48 sm:h-96 lg:w-64 lg:h-[32rem] rounded-xl overflow-hidden shadow-lg bg-white flex-shrink-0"
                   >
                     <img
                       src={screen}
