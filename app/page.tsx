@@ -67,31 +67,52 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-muted/30">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center">
             About Me
           </h2>
           <div className="prose prose-lg max-w-none text-center space-y-6">
-            <p>
-              My journey into iOS development began with a fascination for creating intuitive, 
-              beautiful mobile experiences that users love. As an iOS Engineer, I specialize in 
-              Swift and SwiftUI, crafting applications that not only meet functional requirements 
-              but exceed user expectations through thoughtful design and robust architecture.
-            </p>
-            <p>
-              I believe in the power of continuous learning and disciplined growth. Every project 
-              is an opportunity to push boundaries, learn new technologies, and refine my craft. 
-              This philosophy of "Just Learn." drives everything I do - from writing clean, 
-              maintainable code to sharing knowledge with the developer community.
-            </p>
-            <p>
-              When I'm not coding, you'll find me creating content about iOS development, 
-              sharing insights on social media, or contributing to open-source projects. 
-              I'm passionate about building a strong, supportive tech community and helping 
-              others grow in their development journey.
-            </p>
-          </div>
+  <p>
+    My journey into iOS development began with a fascination of this massive piece of technology we can place in our own hands. As a <strong>self-taught iOS Engineer</strong> and 
+    a <strong>B.S. Computer Science major at Virginia Tech</strong> (entering my final year!), 
+    I specialize in Swift and SwiftUI, crafting applications that not only meet 
+    functional requirements but exceed user expectations through thoughtful design and robust architecture.
+  </p>
+  <p>
+    I believe in the power of continuous learning and disciplined growth. Every project 
+    is an opportunity to push boundaries, learn new technologies, and refine my craft. 
+    This philosophy of "Just Learn." drives everything I do - from writing clean, 
+    maintainable code to sharing knowledge with the developer community.
+  </p>
+  <p>
+    Beyond my passion for iOS, my experiences include impactful roles:
+    <br/><br/>
+    <strong>Software Engineer Intern @ MAXUT, INC.</strong> (June 2025 - Present): Diving deep into iOS development with <strong>Xcode and SwiftUI</strong>.
+    <br/>
+    <strong>Teaching Assistant @ Virginia Tech College of Engineering</strong> (August 2024 - Present): Guiding over 80 students in foundational <strong>Java</strong> and <strong>Python</strong> programming, significantly boosting their comprehension and lab performance.
+    <br/>
+    <strong>Information Technology Developer Intern @ TDI - a Blackstone Portfolio Company</strong> (May 2024 - August 2024): Developed a <strong>Java automation application</strong> that cut manual processing by 45%, saving over $3000 monthly, and engineered integrated Power Automate flows.
+    <br/>
+    <strong>Software Engineer Intern @ ipNX Nigeria Limited</strong> (July 2023 - August 2023): Designed and implemented a secure customer intake form using <strong>React, Next.js, and PHP</strong>, focusing on intuitive UX and strong security.
+  </p>
+  <p>
+    My commitment to creating impactful software has also earned me several recognitions:
+    <br/><br/>
+    &#127941; <strong>Marriott CodeFest 1st Place</strong> (React Native)
+    <br/>
+    &#127942; <strong>UVA HooHacks Best Accessibility Award</strong> (React Native)
+    <br/>
+    &#127894; <strong>HackViolet Best Financial Award</strong> (React Web App)
+    <br/>
+    &#127894; <strong>VTHACKS' 2024 Best Real Estate Award</strong> (React Web App)
+  </p>
+  <p>
+    When I'm not coding, you'll find me creating content about iOS development, 
+    sharing insights on social media, or building my own projects. 
+    I'm passionate about helping others grow in their development journey and avoid making the same mistakes I made.
+  </p>
+</div>
         </div>
       </section>
     </div>
