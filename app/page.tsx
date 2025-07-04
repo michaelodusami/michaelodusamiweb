@@ -108,8 +108,7 @@ export default function HomePage() {
     &#127894; <strong>VTHACKS' 2024 Best Real Estate Award</strong> (React Web App)
   </p>
   <p>
-    When I'm not coding, you'll find me creating content about iOS development, 
-    sharing insights on social media, or building my own projects. 
+    When I'm not coding, you'll find me sharing insights on social media, watching movies such as Inception, sharing my knowledge with others, or playing soccer. 
     I'm passionate about helping others grow in their development journey and avoid making the same mistakes I made.
   </p>
 </div>
