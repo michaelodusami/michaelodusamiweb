@@ -7,10 +7,8 @@ import {
   ArrowLeft,
   Calendar,
   Code,
-  Lightbulb,
-  Target
+  Lightbulb
 } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import { getProjectById } from '@/lib/data/projects';
 
 interface ProjectDetailPageProps {

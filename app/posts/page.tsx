@@ -5,11 +5,6 @@ import Link from 'next/link';
 import { 
   ExternalLink, 
   Calendar,
-  FileText,
-  MessageCircle,
-  Linkedin,
-  Twitter,
-  Youtube,
   Filter,
   X
 } from 'lucide-react';
