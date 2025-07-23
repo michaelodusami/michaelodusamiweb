@@ -1,12 +1,7 @@
-"use client"
+"use client";
 
-import React, { useMemo } from 'react';
-import { 
-  FileText, 
-  Linkedin, 
-  Twitter, 
-  Youtube
-} from 'lucide-react';
+import React, { useMemo } from "react";
+import { FileText, Linkedin, Twitter, Youtube } from "lucide-react";
 
 interface PlatformStats {
   platform: string;
@@ -19,42 +14,45 @@ interface PlatformStats {
 // Simplified data structure - just platform and count
 const platformData = [
   {
-    platform: 'youtube',
-    name: 'YouTube',
+    platform: "youtube",
+    name: "YouTube",
     count: 0,
     icon: Youtube,
-    color: 'text-red-600 bg-red-100 dark:bg-red-900 dark:text-red-400'
+    color: "text-red-600 bg-red-100 dark:bg-red-900 dark:text-red-400",
   },
   {
-    platform: 'x',
-    name: 'X/Twitter',
-    count: 20,
+    platform: "x",
+    name: "X/Twitter",
+    count: 287,
     icon: Twitter,
-    color: 'text-blue-600 bg-blue-100 dark:bg-blue-900 dark:text-blue-400'
+    color: "text-blue-600 bg-blue-100 dark:bg-blue-900 dark:text-blue-400",
   },
   {
-    platform: 'medium',
-    name: 'Medium',
+    platform: "medium",
+    name: "Medium",
     count: 4,
     icon: FileText,
-    color: 'text-green-600 bg-green-100 dark:bg-green-900 dark:text-green-400'
+    color: "text-green-600 bg-green-100 dark:bg-green-900 dark:text-green-400",
   },
   {
-    platform: 'linkedin',
-    name: 'LinkedIn',
+    platform: "linkedin",
+    name: "LinkedIn",
     count: 8,
     icon: Linkedin,
-    color: 'text-blue-700 bg-blue-100 dark:bg-blue-900 dark:text-blue-400'
-  }
+    color: "text-blue-700 bg-blue-100 dark:bg-blue-900 dark:text-blue-400",
+  },
 ];
 
 export default function PostsPage() {
   const platformStats = useMemo(() => {
     // Only include platforms that have posts
-    return platformData.filter(platform => platform.count > 0);
+    return platformData.filter((platform) => platform.count > 0);
   }, []);
 
-  const totalPosts = platformData.reduce((sum, platform) => sum + platform.count, 0);
+  const totalPosts = platformData.reduce(
+    (sum, platform) => sum + platform.count,
+    0
+  );
 
   return (
     <div className="min-h-screen">
@@ -101,17 +99,19 @@ export default function PostsPage() {
                         </div>
                         <div>
                           <h3 className="text-xl font-semibold">{stat.name}</h3>
-                          <p className="text-muted-foreground text-sm">Platform</p>
+                          <p className="text-muted-foreground text-sm">
+                            Platform
+                          </p>
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="text-center">
                       <div className="text-4xl font-bold text-primary mb-2">
                         {stat.count}
                       </div>
                       <p className="text-muted-foreground">
-                        {stat.count === 1 ? 'post' : 'posts'}
+                        {stat.count === 1 ? "post" : "posts"}
                       </p>
                     </div>
                   </div>
@@ -123,7 +123,8 @@ export default function PostsPage() {
               <div className="text-6xl mb-4">📝</div>
               <h3 className="text-2xl font-semibold mb-2">No Posts Yet</h3>
               <p className="text-muted-foreground">
-                Content will appear here as I publish across different platforms.
+                Content will appear here as I publish across different
+                platforms.
               </p>
             </div>
           )}
@@ -131,4 +132,4 @@ export default function PostsPage() {
       </section>
     </div>
   );
-} 
+}
